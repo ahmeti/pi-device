@@ -1,0 +1,36 @@
+{
+  "name": "device",
+  "version": "1.0.0",
+  "description": "Formeras Device Software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Ahmeti@bitbucket.org/Ahmeti/device.git"
+  },
+  "keywords": [
+    "formeras",
+    "device",
+    "software"
+  ],
+  "author": "Ahmet Imamoglu",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/Ahmeti/device#readme",
+  "dependencies": {
+    "admin-lte": "^2.4.2",
+    "bootstrap": "^3.3.7",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1",
+    "socket.io": "^2.0.4",
+    "sweetalert2": "^7.13.2"
+  }
+}
