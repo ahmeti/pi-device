@@ -1,8 +1,8 @@
-var app = require('express')();
-var http = require('http').Server(app);
+var express = require('express')();
+var http = require('http').Server(express);
 var io = require('socket.io')(http);
 
-require(__dirname + '/app/routes.js')(app);
+require(__dirname + '/app/routes.js')(express);
 
 
 

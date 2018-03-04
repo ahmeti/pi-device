@@ -4,7 +4,11 @@
 }
 
 .content{
-    padding: 10px 5px 5px 5px !important;
+    padding: 5px !important;
+}
+
+.main-header {
+    background-color: #fff !important;
 }
 
 .main-footer {
@@ -24,6 +28,12 @@
     background-color: inherit !important;
 }
 
+.navbar-custom-menu .navbar-nav>li>a {
+    padding-top: 18px;
+    padding-bottom: 12px;
+    line-height: 20px;
+}
+
 .main-header .logo{
     padding: 0 5px !important;
 }
@@ -33,12 +43,17 @@
 }
 
 header {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #d2d6de;
 }
 
 /* Panels */
+.panel {
+    border-radius: 0;
+}
 .panel-heading {
     padding: 4px 8px !important;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .panel-body {
     padding: 4px 8px !important;
