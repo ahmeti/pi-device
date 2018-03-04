@@ -1,0 +1,45 @@
+/* Main */
+.content-wrapper {
+    margin: 0 !important;
+}
+
+.content{
+    padding: 10px 5px 5px 5px !important;
+}
+
+.main-footer {
+    margin: 0 !important;
+    padding: 5px 8px !important;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+}
+
+
+/* Navbar */
+.nav>li>a:active, .nav>li>a:focus, .nav>li>a:hover{
+    color: inherit !important;
+    background-color: inherit !important;
+}
+
+.main-header .logo{
+    padding: 0 5px !important;
+}
+
+.logo-lg {
+    text-align: left;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Panels */
+.panel-heading {
+    padding: 4px 8px !important;
+}
+.panel-body {
+    padding: 4px 8px !important;
+}
