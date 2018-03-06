@@ -13,7 +13,7 @@ require(__dirname + '/app/socket.js')(io);
 
 
 // Gpio
-require(__dirname + '/app/gpio.js')(app);
+//require(__dirname + '/app/gpio.js')(app, io);
 
 
 // Server

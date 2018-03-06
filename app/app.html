@@ -39,10 +39,43 @@
 
         <section class="content">
 
-            <div class="panel panel-default">
-                <div class="panel-heading"><strong>Panel Heading</strong></div>
-                <div class="panel-body">Panel Content</div>
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Makine 1</strong></div>
+                        <div class="panel-body">
+                            <button id="device1-start" data-device-name="device1" class="device-start btn btn-sm btn-success">Start</button>
+                            <button id="device1-stop" data-device-name="device1" class="device-stop btn btn-sm btn-danger">Stop</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Makine 2</strong></div>
+                        <div class="panel-body">
+                            <button id="device2-start" data-device-name="device2" class="device-start btn btn-sm btn-success">Start</button>
+                            <button id="device2-stop" data-device-name="device2" class="device-stop btn btn-sm btn-danger">Stop</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Siren</strong></div>
+                        <div class="panel-body">
+                            <button id="alert1-start" data-device-name="device1" class="alert-start btn btn-sm btn-success">Start</button>
+                            <button id="alert1-stop" data-device-name="device1" class="alert-stop btn btn-sm btn-danger">Stop</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+
+
 
         </section>
         <!-- /.content -->
@@ -63,6 +96,33 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io();
+</script>
+
+<script>
+    $(function () {
+
+        var socket = io();
+
+        $(document).on("click", ".device-start", function() {
+            var deviceName = $(this).data('device-name');
+            socket.emit('device-start', deviceName);
+            console.log('device-start ' + deviceName);
+
+            $("#"+deviceName+"-start").prop("disabled", true);
+            $("#"+deviceName+"-stop").prop("disabled", false);
+        });
+
+        $(document).on("click", ".device-stop", function() {
+            var deviceName = $(this).data('device-name');
+            socket.emit('device-stop', deviceName);
+            console.log('device-stop ' + deviceName);         
+
+            $("#"+deviceName+"-stop").prop("disabled", true);
+            $("#"+deviceName+"-start").prop("disabled", false);
+        });
+
+    });
+
 </script>
 
 </body>
